@@ -72,11 +72,13 @@
     }
 
     /* =========================
-       HEADER
+       HEADER / CAPA DA LOGO
     ========================= */
 
-    header {
-      padding: 28px 0 10px;
+    .logo-capa {
+      width: 100%;
+      padding: 28px 16px 32px;
+      background: var(--fundo);
     }
 
     .topo {
@@ -85,9 +87,42 @@
       align-items: center;
     }
 
+    .logo-moldura {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
+      overflow: hidden;
+
+      border-radius: 30px;
+
+      background-image:
+        linear-gradient(
+          rgba(255, 248, 238, 0.10),
+          rgba(255, 248, 238, 0.10)
+        ),
+        url("fundo-logo.png");
+
+      background-size: cover;
+      background-position: center;
+
+      box-shadow:
+        0 20px 50px rgba(55, 40, 32, 0.16);
+    }
+
     .logo {
-      width: 230px;
+      position: absolute;
+      width: 94%;
+      max-width: none;
       height: auto;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      z-index: 2;
     }
 
     /* =========================
@@ -466,12 +501,17 @@
 
     @media (min-width: 700px) {
 
-      header {
-        padding-top: 40px;
+      .logo-capa {
+        padding: 36px 24px 42px;
+      }
+
+      .logo-moldura {
+        max-width: 620px;
+        border-radius: 36px;
       }
 
       .logo {
-        width: 290px;
+        width: 92%;
       }
 
       .hero {
@@ -508,13 +548,19 @@
 
   <!-- HEADER -->
 
-  <header>
+  <header class="logo-capa">
     <div class="container topo">
-      <img
-        src="logo.png"
-        alt="Dr. Denis Willian Cruz — Psicoterapeuta Integrativo e Psicanalista Clínico"
-        class="logo"
-      >
+
+      <div class="logo-moldura">
+
+        <img
+          src="logo.png"
+          alt="Dr. Denis Willian Cruz — Psicoterapeuta Integrativo e Psicanalista Clínico"
+          class="logo"
+        >
+
+      </div>
+
     </div>
   </header>
 

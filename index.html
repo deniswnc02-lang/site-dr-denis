@@ -5,7 +5,7 @@
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
   >
 
   <meta
@@ -13,48 +13,44 @@
     content="Dr. Denis Willian Cruz — Psicoterapeuta Integrativo e Psicanalista Clínico."
   >
 
-  <meta name="theme-color" content="#211C1A">
+  <title>Dr. Denis Willian Cruz | Psicoterapia Integrativa</title>
 
-  <title>Dr. Denis Willian Cruz | Psicoterapeuta Integrativo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
-    /* =========================================================
-       PALETA BASE
-       Depois vamos ajustar estes valores para ficar
-       exatamente igual à identidade visual do aplicativo.
-       ========================================================= */
-
     :root {
-      --fundo: #F3EEE8;
-      --fundo-claro: #FAF8F5;
-      --fundo-escuro: #211C1A;
+      --fundo: #F5F0EA;
+      --fundo-claro: #FBF9F6;
+      --fundo-escuro: #241D1A;
 
-      --marrom: #8B5E4A;
-      --marrom-escuro: #563A30;
+      --marrom: #8B6655;
+      --marrom-escuro: #5A4035;
+      --marrom-claro: #B18B77;
 
-      --texto: #2B2522;
-      --texto-suave: #756962;
+      --texto: #292321;
+      --texto-suave: #756B65;
 
       --branco: #FFFFFF;
 
-      --borda: rgba(139, 94, 74, 0.20);
+      --borda: rgba(90, 64, 53, 0.16);
 
       --sombra:
-        0 20px 60px rgba(43, 37, 34, 0.10);
+        0 20px 60px rgba(70, 48, 39, 0.10);
 
-      --raio: 24px;
+      --radius: 28px;
     }
 
-
-    /* =========================================================
-       RESET
-       ========================================================= */
-
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -62,18 +58,11 @@
     }
 
     body {
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
+      font-family: "DM Sans", sans-serif;
       background: var(--fundo);
       color: var(--texto);
-      line-height: 1.6;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
     img {
@@ -86,102 +75,112 @@
       text-decoration: none;
     }
 
+    button {
+      font-family: inherit;
+    }
 
-    /* =========================================================
+    /* =========================
        CONTAINER
-       ========================================================= */
+    ========================= */
 
     .container {
-      width: min(1120px, calc(100% - 36px));
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
     }
 
+    /* =========================
+       BOTÃO WHATSAPP
+    ========================= */
 
-    /* =========================================================
-       HEADER
-       ========================================================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      background: rgba(250, 248, 245, 0.92);
-
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-
-      border-bottom: 1px solid var(--borda);
-    }
-
-    .nav {
-      min-height: 78px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 20px;
-    }
-
-    .logo {
-      width: 145px;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .nav-links {
-      display: none;
-    }
-
-    .nav-button {
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 10px;
 
-      padding: 11px 17px;
+      min-height: 58px;
+      padding: 0 28px;
 
       border-radius: 999px;
 
+      font-weight: 700;
+      font-size: 16px;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-principal {
       background: var(--marrom-escuro);
       color: var(--branco);
 
-      font-size: 13px;
-      font-weight: 700;
-
-      transition: 0.25s ease;
+      box-shadow:
+        0 12px 30px rgba(90, 64, 53, .20);
     }
 
-    .nav-button:hover {
-      transform: translateY(-2px);
-      opacity: 0.92;
+    .btn-principal:hover {
+      background: #4C342B;
+      box-shadow:
+        0 18px 38px rgba(90, 64, 53, .25);
     }
 
+    .btn-claro {
+      background: var(--branco);
+      color: var(--marrom-escuro);
+      border: 1px solid var(--borda);
+    }
 
-    /* =========================================================
+    /* =========================
        HERO
-       ========================================================= */
+    ========================= */
 
     .hero {
-      padding: 70px 0 80px;
-      overflow: hidden;
-    }
+      min-height: 100svh;
 
-    .hero-grid {
-      display: grid;
-      gap: 48px;
+      display: flex;
       align-items: center;
+
+      padding:
+        70px 0
+        70px;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          rgba(177, 139, 119, .12),
+          transparent 34%
+        ),
+        var(--fundo-claro);
     }
 
-    .hero-text {
-      text-align: center;
+    .hero-content {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      width: min(440px, 88%);
+      margin: 0 auto 46px;
+
+      object-fit: contain;
+
+      filter:
+        drop-shadow(0 10px 20px rgba(60, 40, 32, .06));
     }
 
     .eyebrow {
       display: inline-flex;
-      align-items: center;
 
-      padding: 8px 14px;
+      padding: 10px 20px;
 
       border: 1px solid var(--borda);
       border-radius: 999px;
@@ -189,24 +188,24 @@
       color: var(--marrom-escuro);
 
       font-size: 12px;
-      font-weight: 800;
-
-      letter-spacing: 0.08em;
+      font-weight: 700;
+      letter-spacing: .18em;
       text-transform: uppercase;
 
-      margin-bottom: 22px;
+      margin-bottom: 26px;
     }
 
     .hero h1 {
-      font-family: Georgia, "Times New Roman", serif;
+      max-width: 850px;
+      margin: 0 auto;
 
-      font-size: clamp(42px, 10vw, 78px);
+      font-family: "Playfair Display", serif;
 
-      line-height: 1.02;
+      font-size: clamp(46px, 8vw, 92px);
+      line-height: .98;
+      letter-spacing: -.04em;
 
-      letter-spacing: -0.04em;
-
-      margin-bottom: 24px;
+      color: var(--texto);
     }
 
     .hero h1 span {
@@ -214,1499 +213,1563 @@
     }
 
     .hero-description {
-      max-width: 650px;
-      margin: 0 auto 30px;
+      max-width: 720px;
+      margin: 34px auto 0;
 
       color: var(--texto-suave);
 
-      font-size: 17px;
-      line-height: 1.8;
+      font-size: clamp(18px, 3vw, 22px);
+      line-height: 1.75;
     }
 
-    .hero-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    .hero-highlight {
+      margin: 30px auto 0;
 
-      max-width: 390px;
-      margin: 0 auto;
-    }
-
-    .button {
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      min-height: 54px;
-
-      padding: 0 24px;
-
-      border-radius: 999px;
-
-      font-size: 14px;
-      font-weight: 800;
-
-      transition: 0.25s ease;
-    }
-
-    .button-primary {
-      background: var(--marrom-escuro);
-      color: var(--branco);
-
-      box-shadow:
-        0 12px 30px rgba(86, 58, 48, 0.20);
-    }
-
-    .button-secondary {
-      border: 1px solid var(--borda);
-      background: transparent;
+      font-weight: 700;
       color: var(--marrom-escuro);
-    }
-
-    .button:hover {
-      transform: translateY(-3px);
-    }
-
-    .hero-photo {
-      position: relative;
-    }
-
-    .photo-frame {
-      position: relative;
-
-      width: min(100%, 430px);
-
-      margin: 0 auto;
-
-      border-radius: 34px;
-
-      overflow: hidden;
-
-      box-shadow: var(--sombra);
-    }
-
-    .photo-frame img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-    }
-
-    .photo-caption {
-      position: absolute;
-
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
-
-      padding: 16px 18px;
-
-      background: rgba(33, 28, 26, 0.82);
-
-      color: white;
-
-      border-radius: 18px;
-
-      backdrop-filter: blur(10px);
-    }
-
-    .photo-caption strong {
-      display: block;
-
-      font-family: Georgia, "Times New Roman", serif;
 
       font-size: 18px;
     }
 
-    .photo-caption small {
-      color: rgba(255,255,255,0.72);
+    .hero-button {
+      margin-top: 34px;
     }
 
-
-    /* =========================================================
-       SEÇÕES
-       ========================================================= */
-
-    section {
-      padding: 85px 0;
-    }
-
-    .section-header {
-      max-width: 700px;
-      margin-bottom: 42px;
-    }
-
-    .section-label {
-      color: var(--marrom);
-
-      font-size: 12px;
-      font-weight: 900;
-
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(34px, 7vw, 54px);
-
-      line-height: 1.08;
-
-      letter-spacing: -0.035em;
-    }
-
-    .section-description {
+    .hero-note {
       margin-top: 18px;
 
+      font-size: 13px;
       color: var(--texto-suave);
-
-      font-size: 16px;
-      line-height: 1.8;
     }
 
+    /* =========================
+       FOTO
+    ========================= */
 
-    /* =========================================================
-       SOBRE
-       ========================================================= */
+    .portrait-section {
+      padding: 30px 0 110px;
 
-    .about {
       background: var(--fundo-claro);
     }
 
-    .about-grid {
-      display: grid;
-      gap: 24px;
-    }
+    .portrait {
+      width: min(720px, 100%);
+      margin: 0 auto;
 
-    .about-card {
-      padding: 30px;
+      border-radius: 32px;
 
-      border: 1px solid var(--borda);
-
-      border-radius: var(--raio);
-
-      background: var(--branco);
-    }
-
-    .about-card p {
-      color: var(--texto-suave);
-
-      font-size: 16px;
-      line-height: 1.85;
-
-      margin-bottom: 18px;
-    }
-
-    .about-card p:last-child {
-      margin-bottom: 0;
-    }
-
-
-    /* =========================================================
-       COMO POSSO AJUDAR
-       ========================================================= */
-
-    .help-grid {
-      display: grid;
-      gap: 15px;
-    }
-
-    .help-card {
-      padding: 26px;
-
-      border: 1px solid var(--borda);
-
-      border-radius: 22px;
-
-      background: rgba(255,255,255,0.45);
-
-      transition: 0.25s ease;
-    }
-
-    .help-card:hover {
-      transform: translateY(-4px);
-      background: var(--branco);
       box-shadow: var(--sombra);
+
+      object-fit: cover;
     }
 
-    .help-number {
+    /* =========================
+       SEÇÕES
+    ========================= */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-label {
+      display: block;
+
+      margin-bottom: 16px;
+
       color: var(--marrom);
 
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 15px;
-
-      margin-bottom: 15px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
     }
 
-    .help-card h3 {
-      font-family: Georgia, "Times New Roman", serif;
+    .section-title {
+      font-family: "Playfair Display", serif;
 
-      font-size: 23px;
+      font-size: clamp(38px, 6vw, 66px);
+      line-height: 1.05;
+
+      letter-spacing: -.03em;
+
+      margin-bottom: 28px;
+    }
+
+    .section-text {
+      max-width: 760px;
+
+      color: var(--texto-suave);
+
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    /* =========================
+       SOBRE
+    ========================= */
+
+    .sobre {
+      background: var(--fundo);
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+
+      align-items: center;
+    }
+
+    .quote {
+      padding: 34px;
+
+      border-left: 3px solid var(--marrom);
+
+      background: rgba(255,255,255,.35);
+
+      border-radius: 0 20px 20px 0;
+
+      color: var(--marrom-escuro);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 25px;
+      line-height: 1.5;
+    }
+
+    /* =========================
+       EXPERIÊNCIA
+    ========================= */
+
+    .experiencia {
+      background: var(--fundo-claro);
+    }
+
+    .experiencia-header {
+      max-width: 760px;
+      margin-bottom: 55px;
+    }
+
+    .numeros {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .numero-card {
+      padding: 38px 28px;
+
+      background: var(--branco);
+
+      border: 1px solid var(--borda);
+
+      border-radius: var(--radius);
+
+      box-shadow:
+        0 12px 35px rgba(60,40,32,.05);
+    }
+
+    .numero {
+      font-family: "Playfair Display", serif;
+
+      color: var(--marrom);
+
+      font-size: 48px;
+      font-weight: 700;
+
+      line-height: 1;
+    }
+
+    .numero-card h3 {
+      margin-top: 16px;
+
+      font-size: 19px;
+    }
+
+    .numero-card p {
+      margin-top: 8px;
+
+      color: var(--texto-suave);
+      font-size: 15px;
+    }
+
+    /* =========================
+       ÁREAS
+    ========================= */
+
+    .areas {
+      background: var(--fundo-escuro);
+      color: var(--branco);
+    }
+
+    .areas .section-label {
+      color: var(--marrom-claro);
+    }
+
+    .areas .section-title {
+      color: var(--branco);
+    }
+
+    .areas-intro {
+      color: rgba(255,255,255,.68);
+      max-width: 760px;
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 55px;
+    }
+
+    .areas-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .area-card {
+      padding: 32px;
+
+      border:
+        1px solid rgba(255,255,255,.10);
+
+      background:
+        rgba(255,255,255,.045);
+
+      border-radius: 24px;
+
+      transition:
+        transform .25s ease,
+        background .25s ease;
+    }
+
+    .area-card:hover {
+      transform: translateY(-4px);
+
+      background:
+        rgba(255,255,255,.075);
+    }
+
+    .area-card h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 26px;
 
       margin-bottom: 10px;
     }
 
-    .help-card p {
-      color: var(--texto-suave);
+    .area-card p {
+      color: rgba(255,255,255,.62);
 
-      font-size: 14px;
-      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.75;
     }
 
+    /* =========================
+       HISTÓRIA PESSOAL
+    ========================= */
 
-    /* =========================================================
-       ABORDAGEM
-       ========================================================= */
-
-    .approach {
-      background: var(--fundo-escuro);
-      color: var(--branco);
+    .historia {
+      background: var(--fundo);
     }
 
-    .approach .section-label {
-      color: #C69B83;
-    }
-
-    .approach .section-description {
-      color: rgba(255,255,255,0.68);
-    }
-
-    .approach-grid {
+    .historia-grid {
       display: grid;
-      gap: 18px;
+
+      grid-template-columns:
+        .9fr 1.1fr;
+
+      gap: 80px;
+
+      align-items: start;
     }
 
-    .approach-card {
-      padding: 30px;
-
-      border: 1px solid rgba(255,255,255,0.10);
-
-      border-radius: 24px;
-
-      background: rgba(255,255,255,0.045);
-    }
-
-    .approach-card h3 {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 25px;
-
-      margin-bottom: 12px;
-    }
-
-    .approach-card p {
-      color: rgba(255,255,255,0.68);
-
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-
-    /* =========================================================
-       FORMAÇÃO
-       ========================================================= */
-
-    .formation {
-      background: var(--fundo-claro);
-    }
-
-    .formation-list {
+    .historia-lista {
       display: grid;
-      gap: 12px;
-    }
 
-    .formation-item {
-      display: flex;
-      gap: 18px;
+      grid-template-columns:
+        repeat(2, 1fr);
 
-      padding: 20px;
-
-      border-bottom: 1px solid var(--borda);
-    }
-
-    .formation-item:last-child {
-      border-bottom: none;
-    }
-
-    .formation-dot {
-      flex-shrink: 0;
-
-      width: 10px;
-      height: 10px;
-
-      margin-top: 8px;
-
-      border-radius: 50%;
-
-      background: var(--marrom);
-    }
-
-    .formation-item strong {
-      display: block;
-
-      margin-bottom: 4px;
-    }
-
-    .formation-item span {
-      color: var(--texto-suave);
-
-      font-size: 14px;
-    }
-
-
-    /* =========================================================
-       CONTEÚDO
-       ========================================================= */
-
-    .content-grid {
-      display: grid;
-      gap: 15px;
-    }
-
-    .content-card {
-      padding: 28px;
-
-      min-height: 180px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      border-radius: 24px;
-
-      background: var(--branco);
-
-      border: 1px solid var(--borda);
-
-      box-shadow:
-        0 10px 35px rgba(43,37,34,0.05);
-    }
-
-    .content-card span {
-      color: var(--marrom);
-
-      font-size: 12px;
-      font-weight: 900;
-
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    .content-card h3 {
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 25px;
+      gap: 14px;
 
       margin-top: 30px;
     }
 
-    .content-card a {
-      display: inline-block;
+    .historia-item {
+      padding: 20px;
 
-      margin-top: 20px;
+      border:
+        1px solid var(--borda);
+
+      border-radius: 18px;
+
+      background:
+        rgba(255,255,255,.38);
+
+      font-weight: 600;
 
       color: var(--marrom-escuro);
-
-      font-size: 13px;
-      font-weight: 800;
     }
 
+    /* =========================
+       ABORDAGEM
+    ========================= */
 
-    /* =========================================================
-       CTA
-       ========================================================= */
-
-    .cta {
-      padding: 90px 0;
+    .abordagem {
+      background: var(--fundo-claro);
     }
 
-    .cta-box {
-      position: relative;
+    .abordagem-box {
+      max-width: 900px;
+      margin: 0 auto;
 
-      overflow: hidden;
+      padding: 60px;
 
-      padding: 50px 28px;
-
-      text-align: center;
+      background: var(--branco);
 
       border-radius: 32px;
-
-      background: var(--marrom-escuro);
-
-      color: var(--branco);
 
       box-shadow: var(--sombra);
     }
 
-    .cta-box::before {
-      content: "";
+    .abordagem-box h3 {
+      font-family: "Playfair Display", serif;
 
-      position: absolute;
+      font-size: 34px;
 
-      width: 250px;
-      height: 250px;
-
-      border-radius: 50%;
-
-      border: 1px solid rgba(255,255,255,0.08);
-
-      top: -120px;
-      right: -80px;
+      margin-bottom: 22px;
     }
 
-    .cta-box h2 {
-      position: relative;
+    .abordagem-box p {
+      color: var(--texto-suave);
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.9;
 
-      font-size: clamp(34px, 8vw, 55px);
-
-      line-height: 1.05;
-
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
-    .cta-box p {
-      position: relative;
+    /* =========================
+       FORMAÇÃO
+    ========================= */
 
-      max-width: 620px;
-
-      margin: 0 auto 28px;
-
-      color: rgba(255,255,255,0.70);
+    .formacao {
+      background: var(--fundo);
     }
 
-    .cta-box .button {
-      position: relative;
+    .formacao-grid {
+      display: grid;
 
-      background: var(--branco);
-      color: var(--marrom-escuro);
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+
+      margin-top: 45px;
     }
 
+    .formacao-item {
+      padding: 28px;
 
-    /* =========================================================
-       FOOTER
-       ========================================================= */
+      border-radius: 22px;
 
-    footer {
-      padding: 45px 0;
+      border:
+        1px solid var(--borda);
 
-      background: var(--fundo-escuro);
+      background:
+        rgba(255,255,255,.38);
+    }
 
-      color: rgba(255,255,255,0.70);
+    .formacao-item h3 {
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
 
+    .formacao-item p {
+      color: var(--texto-suave);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
+    .conteudo {
+      background: var(--fundo-claro);
       text-align: center;
     }
 
-    .footer-logo {
-      width: 170px;
+    .conteudo-texto {
+      max-width: 680px;
+      margin: 0 auto 35px;
 
-      margin: 0 auto 20px;
+      color: var(--texto-suave);
 
-      opacity: 0.95;
+      font-size: 18px;
     }
 
-    footer p {
-      font-size: 13px;
-    }
-
-    .footer-social {
+    .social-grid {
       display: flex;
 
-      justify-content: center;
       flex-wrap: wrap;
 
-      gap: 10px;
+      justify-content: center;
 
-      margin: 22px 0;
+      gap: 12px;
     }
 
-    .footer-social a {
-      padding: 9px 13px;
-
-      border: 1px solid rgba(255,255,255,0.12);
+    .social {
+      padding: 13px 22px;
 
       border-radius: 999px;
 
-      font-size: 12px;
+      border: 1px solid var(--borda);
 
-      transition: 0.25s ease;
+      background: var(--branco);
+
+      font-weight: 600;
+
+      transition:
+        transform .25s ease,
+        background .25s ease;
     }
 
-    .footer-social a:hover {
-      background: rgba(255,255,255,0.08);
+    .social:hover {
+      transform: translateY(-3px);
+      background: var(--fundo);
     }
 
+    /* =========================
+       CTA FINAL
+    ========================= */
 
-    /* =========================================================
-       DESKTOP
-       ========================================================= */
+    .cta {
+      background: var(--marrom-escuro);
 
-    @media (min-width: 760px) {
+      color: var(--branco);
+
+      text-align: center;
+
+      padding:
+        120px 20px;
+    }
+
+    .cta .section-label {
+      color: var(--marrom-claro);
+    }
+
+    .cta h2 {
+      max-width: 850px;
+
+      margin: 0 auto;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(42px, 7vw, 78px);
+
+      line-height: 1.05;
+
+      letter-spacing: -.03em;
+    }
+
+    .cta p {
+      max-width: 650px;
+
+      margin: 25px auto 0;
+
+      color: rgba(255,255,255,.68);
+
+      font-size: 18px;
+    }
+
+    .cta .btn {
+      margin-top: 35px;
+
+      background: var(--branco);
+
+      color: var(--marrom-escuro);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #181311;
+
+      color: rgba(255,255,255,.6);
+
+      padding: 50px 0;
+    }
+
+    .footer-content {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 30px;
+    }
+
+    .footer-name {
+      color: var(--branco);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 22px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media (max-width: 800px) {
 
       .container {
-        width: min(1120px, calc(100% - 70px));
-      }
-
-      .nav {
-        min-height: 88px;
-      }
-
-      .logo {
-        width: 170px;
-      }
-
-      .nav-links {
-        display: flex;
-
-        align-items: center;
-
-        gap: 25px;
-
-        color: var(--texto-suave);
-
-        font-size: 13px;
-        font-weight: 700;
-      }
-
-      .nav-links a:hover {
-        color: var(--marrom);
+        width: min(100% - 30px, 680px);
       }
 
       .hero {
-        padding: 100px 0 110px;
+        min-height: auto;
+
+        padding:
+          60px 0
+          75px;
       }
 
-      .hero-grid {
-        grid-template-columns: 1.05fr 0.95fr;
-        gap: 80px;
+      .logo {
+        width: min(430px, 94%);
+
+        margin-bottom: 38px;
       }
 
-      .hero-text {
-        text-align: left;
+      .hero h1 {
+        font-size: clamp(44px, 13vw, 68px);
       }
 
       .hero-description {
-        margin-left: 0;
+        font-size: 17px;
       }
 
-      .hero-buttons {
-        flex-direction: row;
-
-        max-width: none;
-
-        margin-left: 0;
+      .hero-highlight {
+        font-size: 16px;
       }
 
-      .hero-photo {
-        order: 2;
+      .portrait-section {
+        padding:
+          15px 0
+          80px;
       }
 
-      .photo-frame {
-        width: 100%;
+      .portrait {
+        border-radius: 24px;
       }
 
-      .about-grid {
-        grid-template-columns: 1.1fr 0.9fr;
+      section {
+        padding: 80px 0;
       }
 
-      .help-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .sobre-grid,
+      .historia-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
       }
 
-      .approach-grid {
-        grid-template-columns: repeat(3, 1fr);
+      .numeros {
+        grid-template-columns: 1fr;
       }
 
-      .content-grid {
-        grid-template-columns: repeat(3, 1fr);
+      .areas-grid {
+        grid-template-columns: 1fr;
       }
 
-      .cta-box {
-        padding: 75px 50px;
+      .historia-lista {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .formacao-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .abordagem-box {
+        padding: 35px 25px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+
+        text-align: center;
       }
     }
 
+    @media (max-width: 480px) {
 
-    /* =========================================================
-       ANIMAÇÃO SUAVE
-       ========================================================= */
-
-    @media (prefers-reduced-motion: no-preference) {
-
-      .hero-text,
-      .hero-photo {
-        animation: aparecer 0.8s ease both;
+      .hero {
+        padding-top: 45px;
       }
 
-      .hero-photo {
-        animation-delay: 0.12s;
+      .logo {
+        width: 96%;
+        margin-bottom: 32px;
       }
 
-      @keyframes aparecer {
-        from {
-          opacity: 0;
-          transform: translateY(18px);
-        }
+      .eyebrow {
+        font-size: 10px;
+        padding: 9px 15px;
+      }
 
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .hero-highlight {
+        font-size: 15px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .section-title {
+        font-size: 43px;
+      }
+
+      .section-text {
+        font-size: 16px;
+      }
+
+      .quote {
+        padding: 25px;
+
+        font-size: 21px;
+      }
+
+      .historia-lista {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding:
+          90px 20px;
+      }
+
+      .cta h2 {
+        font-size: 45px;
+      }
+
+      .cta p {
+        font-size: 16px;
+      }
+
+      .social {
+        width: 100%;
       }
     }
 
   </style>
 </head>
 
-
 <body>
 
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
 
-  <!-- =======================================================
-       HEADER
-       ======================================================= -->
+  <header class="hero">
 
-  <header>
+    <div class="container hero-content">
 
-    <div class="container nav">
-
-      <a href="#inicio">
-        <img
-          src="logo.png"
-          alt="Dr. Denis Willian Cruz"
-          class="logo"
-        >
-      </a>
-
-      <nav class="nav-links">
-
-        <a href="#sobre">Sobre</a>
-
-        <a href="#abordagem">Abordagem</a>
-
-        <a href="#formacao">Formação</a>
-
-        <a href="#conteudos">Conteúdos</a>
-
-      </nav>
-
-      <a
-        class="nav-button"
-        href="#contato"
+      <!-- SUA LOGO -->
+      <img
+        class="logo"
+        src="logo.png"
+        alt="Dr. Denis Willian Cruz — Psicoterapeuta Integrativo e Psicanalista Clínico"
       >
-        Falar comigo
-      </a>
+
+      <span class="eyebrow">
+        Psicoterapia Integrativa
+      </span>
+
+      <h1>
+        Um espaço para
+        <span>compreender você.</span>
+      </h1>
+
+      <p class="hero-description">
+        Um espaço de escuta, reflexão e compreensão para olhar
+        para aquilo que você vive, sente e repete com mais
+        profundidade.
+      </p>
+
+      <p class="hero-highlight">
+        Mais de 1.000 vidas já alcançadas através da terapia e da escuta.
+      </p>
+
+      <div class="hero-button">
+
+        <a
+          href="#"
+          class="btn btn-principal"
+          onclick="abrirWhatsApp(event)"
+        >
+          Falar comigo pelo WhatsApp
+        </a>
+
+      </div>
+
+      <p class="hero-note">
+        Atendimento com escuta, acolhimento e olhar individualizado.
+      </p>
 
     </div>
 
   </header>
 
 
-
-  <main>
-
-
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
-
-    <section
-      class="hero"
-      id="inicio"
-    >
-
-      <div class="container hero-grid">
-
-
-        <div class="hero-text">
-
-          <div class="eyebrow">
-            Psicoterapia Integrativa
-          </div>
-
-          <h1>
-            Um espaço para
-            <span>compreender você.</span>
-          </h1>
-
-          <p class="hero-description">
-            Um espaço de escuta, reflexão e compreensão
-            para olhar para aquilo que você vive,
-            sente e repete com mais profundidade.
-          </p>
-
-          <div class="hero-buttons">
-
-            <!--
-              IMPORTANTE:
-              Depois vamos colocar aqui o seu número real
-              do WhatsApp.
-            -->
-
-            <a
-              class="button button-primary"
-              href="#contato"
-            >
-              Quero conhecer o trabalho
-            </a>
-
-            <a
-              class="button button-secondary"
-              href="#sobre"
-            >
-              Conheça meu trabalho
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="hero-photo">
-
-          <div class="photo-frame">
-
-            <img
-              src="foto-denis.jpg"
-              alt="Dr. Denis Willian Cruz"
-            >
-
-            <div class="photo-caption">
-
-              <strong>
-                Dr. Denis Willian Cruz
-              </strong>
-
-              <small>
-                Psicoterapeuta Integrativo
-                · Psicanalista Clínico
-              </small>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         SOBRE
-         ===================================================== -->
-
-    <section
-      class="about"
-      id="sobre"
-    >
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            Sobre mim
-          </div>
-
-          <h2 class="section-title">
-            Antes de qualquer diagnóstico,
-            existe uma história.
-          </h2>
-
-          <p class="section-description">
-            Meu trabalho parte da compreensão de que cada
-            pessoa possui uma história, uma subjetividade
-            e uma maneira singular de experimentar a vida.
-          </p>
-
-        </div>
-
-
-        <div class="about-grid">
-
-
-          <div class="about-card">
-
-            <p>
-              Sou Dr. Denis Willian Cruz, psicoterapeuta
-              integrativo e psicanalista clínico.
-            </p>
-
-            <p>
-              Meu trabalho busca compreender o ser humano
-              para além de sintomas isolados, considerando
-              emoções, comportamentos, relacionamentos,
-              experiências de vida e a maneira como cada
-              pessoa constrói significado para aquilo que vive.
-            </p>
-
-            <p>
-              A psicoterapia pode ser um espaço seguro para
-              olhar para dentro, compreender padrões,
-              desenvolver consciência e construir novas
-              possibilidades.
-            </p>
-
-          </div>
-
-
-          <div class="about-card">
-
-            <p>
-              <strong>
-                Meu propósito:
-              </strong>
-            </p>
-
-            <p>
-              Caminhar ao lado de pessoas que desejam
-              compreender melhor a si mesmas e transformar
-              a maneira como se relacionam consigo,
-              com os outros e com a própria história.
-            </p>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         COMO POSSO AJUDAR
-         ===================================================== -->
-
-    <section id="ajuda">
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            Possibilidades de cuidado
-          </div>
-
-          <h2 class="section-title">
-            O que podemos trabalhar juntos.
-          </h2>
-
-          <p class="section-description">
-            Cada processo é individual. Estes são alguns
-            dos temas que podem fazer parte do acompanhamento.
-          </p>
-
-        </div>
-
-
-        <div class="help-grid">
-
-
-          <article class="help-card">
-
-            <div class="help-number">
-              01
-            </div>
-
-            <h3>
-              Ansiedade e sobrecarga emocional
-            </h3>
-
-            <p>
-              Compreender pensamentos, emoções,
-              comportamentos e padrões que podem estar
-              mantendo ciclos de sofrimento.
-            </p>
-
-          </article>
-
-
-          <article class="help-card">
-
-            <div class="help-number">
-              02
-            </div>
-
-            <h3>
-              Autoconhecimento
-            </h3>
-
-            <p>
-              Desenvolver uma compreensão mais profunda
-              sobre sua história, escolhas, emoções,
-              necessidades e padrões relacionais.
-            </p>
-
-          </article>
-
-
-          <article class="help-card">
-
-            <div class="help-number">
-              03
-            </div>
-
-            <h3>
-              Relacionamentos
-            </h3>
-
-            <p>
-              Refletir sobre vínculos, limites,
-              comunicação, conflitos, dependência emocional
-              e padrões que se repetem.
-            </p>
-
-          </article>
-
-
-          <article class="help-card">
-
-            <div class="help-number">
-              04
-            </div>
-
-            <h3>
-              Neurodivergência
-            </h3>
-
-            <p>
-              Acompanhamento considerando singularidades
-              relacionadas à neurodivergência e aos
-              diferentes modos de funcionamento humano.
-            </p>
-
-          </article>
-
-
-          <article class="help-card">
-
-            <div class="help-number">
-              05
-            </div>
-
-            <h3>
-              Família
-            </h3>
-
-            <p>
-              Compreender conflitos familiares, comunicação,
-              papéis, limites e impactos emocionais
-              presentes nas relações.
-            </p>
-
-          </article>
-
-
-          <article class="help-card">
-
-            <div class="help-number">
-              06
-            </div>
-
-            <h3>
-              Desenvolvimento pessoal
-            </h3>
-
-            <p>
-              Construir consciência, responsabilidade,
-              maturidade emocional e novas possibilidades
-              diante da própria vida.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         ABORDAGEM
-         ===================================================== -->
-
-    <section
-      class="approach"
-      id="abordagem"
-    >
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            Minha abordagem
-          </div>
-
-          <h2 class="section-title">
-            Uma escuta que considera
-            a pessoa por inteiro.
-          </h2>
-
-          <p class="section-description">
-            A proposta integrativa permite compreender
-            diferentes dimensões da experiência humana,
-            respeitando a singularidade de cada processo.
-          </p>
-
-        </div>
-
-
-        <div class="approach-grid">
-
-
-          <article class="approach-card">
-
-            <h3>
-              Psicoterapia Integrativa
-            </h3>
-
-            <p>
-              Uma perspectiva que considera diferentes
-              dimensões da experiência humana e busca
-              compreender cada pessoa de maneira singular.
-            </p>
-
-          </article>
-
-
-          <article class="approach-card">
-
-            <h3>
-              Psicanálise Clínica
-            </h3>
-
-            <p>
-              Um olhar aprofundado para conflitos,
-              padrões, desejos, experiências e aspectos
-              inconscientes presentes na história do sujeito.
-            </p>
-
-          </article>
-
-
-          <article class="approach-card">
-
-            <h3>
-              Comportamento humano
-            </h3>
-
-            <p>
-              Investigação das relações entre pensamentos,
-              emoções, comportamentos, ambiente e vínculos.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         FORMAÇÃO
-         ===================================================== -->
-
-    <section
-      class="formation"
-      id="formacao"
-    >
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            Formação
-          </div>
-
-          <h2 class="section-title">
-            Conhecimento para
-            sustentar a prática.
-          </h2>
-
-          <p class="section-description">
-            Minha formação reúne diferentes áreas voltadas
-            à compreensão do ser humano, comportamento,
-            desenvolvimento e experiência subjetiva.
-          </p>
-
-        </div>
-
-
-        <div class="formation-list">
-
-
-          <div class="formation-item">
-
-            <div class="formation-dot"></div>
-
-            <div>
-
-              <strong>
-                Psicoterapia Integrativa
-              </strong>
-
-              <span>
-                Formação e atuação em abordagem integrativa.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="formation-item">
-
-            <div class="formation-dot"></div>
-
-            <div>
-
-              <strong>
-                Psicanálise Clínica
-              </strong>
-
-              <span>
-                Estudos voltados à compreensão da subjetividade
-                e dos processos psíquicos.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="formation-item">
-
-            <div class="formation-dot"></div>
-
-            <div>
-
-              <strong>
-                Neurodivergência e Transtornos do Neurodesenvolvimento
-              </strong>
-
-              <span>
-                Formação complementar voltada à compreensão
-                das diferentes formas de funcionamento humano.
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="formation-item">
-
-            <div class="formation-dot"></div>
-
-            <div>
-
-              <strong>
-                Teologia e formação cristã
-              </strong>
-
-              <span>
-                Estudos teológicos integrados à compreensão
-                do ser humano e da experiência de fé.
-              </span>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         CONTEÚDOS
-         ===================================================== -->
-
-    <section
-      id="conteudos"
-    >
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            Conteúdo
-          </div>
-
-          <h2 class="section-title">
-            Reflexões para continuar
-            pensando depois da sessão.
-          </h2>
-
-          <p class="section-description">
-            Conteúdos sobre psicoterapia, comportamento,
-            saúde emocional, relacionamentos,
-            autoconhecimento e vida.
-          </p>
-
-        </div>
-
-
-        <div class="content-grid">
-
-
-          <article class="content-card">
-
-            <span>
-              Instagram
-            </span>
-
-            <h3>
-              Reflexões sobre comportamento e saúde emocional.
-            </h3>
-
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Acessar Instagram →
-            </a>
-
-          </article>
-
-
-          <article class="content-card">
-
-            <span>
-              YouTube
-            </span>
-
-            <h3>
-              Conversas e conteúdos em profundidade.
-            </h3>
-
-            <a
-              href="https://www.youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Acessar YouTube →
-            </a>
-
-          </article>
-
-
-          <article class="content-card">
-
-            <span>
-              Projetos
-            </span>
-
-            <h3>
-              Escritos, estudos e projetos autorais.
-            </h3>
-
-            <a
-              href="#contato"
-            >
-              Conhecer →
-            </a>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         CTA
-         ===================================================== -->
-
-    <section
-      class="cta"
-      id="contato"
-    >
-
-      <div class="container">
-
-        <div class="cta-box">
-
-          <h2>
-            Talvez seja hora
-            de olhar para isso.
-          </h2>
-
-          <p>
-            Se você sente que precisa compreender melhor
-            o que está acontecendo dentro de você,
-            podemos conversar sobre um processo terapêutico.
-          </p>
-
-
-          <!--
-            ==================================================
-            WHATSAPP
-
-            AQUI VAMOS COLOCAR SEU NÚMERO REAL.
-
-            Exemplo:
-            https://wa.me/5594999999999
-
-            Não altere agora.
-            Vamos colocar o número correto depois.
-            ==================================================
-          -->
-
-          <a
-            class="button"
-            href="#"
-            onclick="abrirWhatsApp(event)"
-          >
-            Quero falar pelo WhatsApp
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
-
-  <footer>
+  <!-- =====================================================
+       FOTO
+  ====================================================== -->
+
+  <section class="portrait-section">
 
     <div class="container">
 
       <img
-        src="logo.png"
+        class="portrait"
+        src="foto-denis.jpg"
         alt="Dr. Denis Willian Cruz"
-        class="footer-logo"
       >
 
+    </div>
 
-      <div class="footer-social">
+  </section>
+
+
+  <!-- =====================================================
+       SOBRE
+  ====================================================== -->
+
+  <section class="sobre">
+
+    <div class="container sobre-grid">
+
+      <div>
+
+        <span class="section-label">
+          Quem sou
+        </span>
+
+        <h2 class="section-title">
+          A pessoa por trás da escuta.
+        </h2>
+
+      </div>
+
+      <div>
+
+        <p class="section-text">
+
+          Sou Dr. Denis Willian Cruz, Psicoterapeuta Integrativo
+          e Psicanalista Clínico.
+
+          Minha prática busca compreender o ser humano para além
+          do sintoma, considerando sua história, seus vínculos,
+          seus comportamentos, seus conflitos e a maneira como
+          interpreta a própria realidade.
+
+        </p>
+
+        <br>
+
+        <p class="section-text">
+
+          Meu trabalho é construído a partir da escuta, do
+          acolhimento e da busca por compreender aquilo que muitas
+          vezes a pessoa sente, mas ainda não conseguiu colocar
+          em palavras.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       EXPERIÊNCIA
+  ====================================================== -->
+
+  <section class="experiencia">
+
+    <div class="container">
+
+      <div class="experiencia-header">
+
+        <span class="section-label">
+          Experiência
+        </span>
+
+        <h2 class="section-title">
+          Escutar também é transformar.
+        </h2>
+
+        <p class="section-text">
+
+          Ao longo da minha trajetória, a escuta clínica tornou-se
+          uma ferramenta para acompanhar pessoas em diferentes
+          momentos de suas histórias.
+
+        </p>
+
+      </div>
+
+
+      <div class="numeros">
+
+        <div class="numero-card">
+
+          <div class="numero">
+            +1.000
+          </div>
+
+          <h3>
+            vidas alcançadas
+          </h3>
+
+          <p>
+            Pessoas acompanhadas através da terapia,
+            escuta e acolhimento.
+          </p>
+
+        </div>
+
+
+        <div class="numero-card">
+
+          <div class="numero">
+            01
+          </div>
+
+          <h3>
+            escuta individualizada
+          </h3>
+
+          <p>
+            Cada história é compreendida dentro de sua
+            singularidade.
+          </p>
+
+        </div>
+
+
+        <div class="numero-card">
+
+          <div class="numero">
+            ∞
+          </div>
+
+          <h3>
+            possibilidade de mudança
+          </h3>
+
+          <p>
+            Compreender padrões pode abrir novos caminhos.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ÁREAS DE ATUAÇÃO
+  ====================================================== -->
+
+  <section class="areas">
+
+    <div class="container">
+
+      <span class="section-label">
+        Áreas de atuação
+      </span>
+
+      <h2 class="section-title">
+        Especialidades que fazem parte da minha prática.
+      </h2>
+
+      <p class="areas-intro">
+
+        Minha atuação integra diferentes conhecimentos para
+        compreender aspectos emocionais, comportamentais,
+        relacionais e existenciais presentes na história de cada
+        pessoa.
+
+      </p>
+
+
+      <div class="areas-grid">
+
+
+        <article class="area-card">
+
+          <h3>
+            Neurodivergência
+          </h3>
+
+          <p>
+            Compreensão das diferentes formas de funcionamento
+            neurológico e de seus impactos na vida emocional,
+            familiar, profissional e social.
+          </p>
+
+        </article>
+
+
+        <article class="area-card">
+
+          <h3>
+            Dilemas emocionais
+          </h3>
+
+          <p>
+            Conflitos internos, decisões difíceis, sentimentos
+            ambivalentes e situações que parecem não encontrar
+            uma saída.
+          </p>
+
+        </article>
+
+
+        <article class="area-card">
+
+          <h3>
+            Linguagem silenciosa
+          </h3>
+
+          <p>
+            Atenção à comunicação não verbal, comportamento,
+            expressões, padrões relacionais e aquilo que muitas
+            vezes é comunicado sem palavras.
+          </p>
+
+        </article>
+
+
+        <article class="area-card">
+
+          <h3>
+            Comportamento humano
+          </h3>
+
+          <p>
+            Investigação dos padrões que influenciam escolhas,
+            relacionamentos e a maneira como cada pessoa se
+            posiciona diante da própria história.
+          </p>
+
+        </article>
+
+
+        <article class="area-card">
+
+          <h3>
+            Relacionamentos e conflitos
+          </h3>
+
+          <p>
+            Compreensão das dinâmicas emocionais presentes nos
+            relacionamentos, na família e nas relações
+            interpessoais.
+          </p>
+
+        </article>
+
+
+        <article class="area-card">
+
+          <h3>
+            Autoconhecimento
+          </h3>
+
+          <p>
+            Um espaço para compreender quem você é, aquilo que
+            sente e os padrões que deseja transformar.
+          </p>
+
+        </article>
+
+
+        <article class="area-card">
+
+          <h3>
+            Ansiedade e questões emocionais
+          </h3>
+
+          <p>
+            Acompanhamento de pessoas que enfrentam sobrecarga
+            emocional, preocupações persistentes e dificuldades
+            para lidar com a própria experiência.
+          </p>
+
+        </article>
+
+
+        <article class="area-card">
+
+          <h3>
+            Transtornos do neurodesenvolvimento
+          </h3>
+
+          <p>
+            Olhar individualizado para aspectos emocionais,
+            comportamentais e relacionais relacionados ao
+            neurodesenvolvimento.
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       HISTÓRIA
+  ====================================================== -->
+
+  <section class="historia">
+
+    <div class="container historia-grid">
+
+      <div>
+
+        <span class="section-label">
+          Além do consultório
+        </span>
+
+        <h2 class="section-title">
+          Antes do profissional, existe uma história.
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <p class="section-text">
+
+          Sou marido, pai, cristão, empreendedor, músico, cantor
+          e escritor.
+
+        </p>
+
+        <br>
+
+        <p class="section-text">
+
+          Minha trajetória é formada por diferentes experiências,
+          estudos e encontros que ampliaram minha maneira de
+          compreender pessoas, histórias, comportamentos e
+          relações.
+
+        </p>
+
+        <br>
+
+        <p class="section-text">
+
+          Também vivo a experiência da neurodivergência, o que
+          acrescenta uma perspectiva pessoal à minha compreensão
+          sobre diferentes formas de perceber, pensar e
+          experimentar o mundo.
+
+        </p>
+
+
+        <div class="historia-lista">
+
+          <div class="historia-item">
+            Marido
+          </div>
+
+          <div class="historia-item">
+            Pai
+          </div>
+
+          <div class="historia-item">
+            Cristão
+          </div>
+
+          <div class="historia-item">
+            Empreendedor
+          </div>
+
+          <div class="historia-item">
+            Músico
+          </div>
+
+          <div class="historia-item">
+            Escritor
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ABORDAGEM
+  ====================================================== -->
+
+  <section class="abordagem">
+
+    <div class="container">
+
+      <div class="abordagem-box">
+
+        <span class="section-label">
+          Minha abordagem
+        </span>
+
+        <h3>
+          Não existe uma história humana que possa ser reduzida
+          a uma única palavra.
+        </h3>
+
+        <p>
+
+          A Psicoterapia Integrativa permite construir uma
+          compreensão ampla da pessoa, considerando diferentes
+          dimensões de sua experiência.
+
+        </p>
+
+        <p>
+
+          Na prática clínica, isso significa olhar para emoções,
+          pensamentos, comportamentos, relações, história de vida,
+          conflitos e padrões que podem estar influenciando o
+          presente.
+
+        </p>
+
+        <p>
+
+          A escuta não é apenas ouvir o que foi dito.
+          É também buscar compreender o que existe por trás
+          das palavras.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FORMAÇÃO
+  ====================================================== -->
+
+  <section class="formacao">
+
+    <div class="container">
+
+      <span class="section-label">
+        Formação e aprofundamentos
+      </span>
+
+      <h2 class="section-title">
+        Conhecimento para compreender com profundidade.
+      </h2>
+
+      <p class="section-text">
+
+        Minha trajetória acadêmica e profissional reúne diferentes
+        áreas de estudo relacionadas à compreensão do ser humano,
+        comportamento e desenvolvimento.
+
+      </p>
+
+
+      <div class="formacao-grid">
+
+
+        <div class="formacao-item">
+
+          <h3>
+            Psicoterapia Integrativa
+          </h3>
+
+          <p>
+            Atuação fundamentada em uma perspectiva integrativa
+            de compreensão do indivíduo.
+          </p>
+
+        </div>
+
+
+        <div class="formacao-item">
+
+          <h3>
+            Psicanálise Clínica
+          </h3>
+
+          <p>
+            Aprofundamento na compreensão da subjetividade,
+            conflitos e processos inconscientes.
+          </p>
+
+        </div>
+
+
+        <div class="formacao-item">
+
+          <h3>
+            Neurodivergência
+          </h3>
+
+          <p>
+            Estudos voltados à compreensão das diferentes formas
+            de funcionamento neurológico.
+          </p>
+
+        </div>
+
+
+        <div class="formacao-item">
+
+          <h3>
+            Transtornos do Neurodesenvolvimento
+          </h3>
+
+          <p>
+            Aprofundamento em aspectos relacionados ao
+            neurodesenvolvimento e comportamento.
+          </p>
+
+        </div>
+
+
+        <div class="formacao-item">
+
+          <h3>
+            Linguagem silenciosa
+          </h3>
+
+          <p>
+            Estudos sobre comunicação não verbal, comportamento
+            observável e percepção das dinâmicas relacionais.
+          </p>
+
+        </div>
+
+
+        <div class="formacao-item">
+
+          <h3>
+            Dilemas emocionais
+          </h3>
+
+          <p>
+            Aprofundamento na compreensão de conflitos,
+            emoções e processos de decisão.
+          </p>
+
+        </div>
+
+
+        <div class="formacao-item">
+
+          <h3>
+            Teologia
+          </h3>
+
+          <p>
+            Formação e estudos teológicos que também fazem parte
+            da minha trajetória pessoal e intelectual.
+          </p>
+
+        </div>
+
+
+        <div class="formacao-item">
+
+          <h3>
+            Comportamento humano
+          </h3>
+
+          <p>
+            Estudos contínuos sobre comportamento, relações,
+            comunicação e processos humanos.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CONTEÚDO
+  ====================================================== -->
+
+  <section class="conteudo">
+
+    <div class="container">
+
+      <span class="section-label">
+        Conteúdo
+      </span>
+
+      <h2 class="section-title">
+        Psicologia, comportamento e vida real.
+      </h2>
+
+      <p class="conteudo-texto">
+
+        Compartilho reflexões sobre saúde emocional,
+        comportamento humano, relacionamentos, autoconhecimento,
+        neurodivergência e psicoterapia.
+
+      </p>
+
+
+      <div class="social-grid">
 
         <a
-          href="https://www.instagram.com/"
+          class="social"
+          href="#"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
+          id="instagramLink"
         >
           Instagram
         </a>
 
         <a
-          href="https://www.youtube.com/"
+          class="social"
+          href="#"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
+          id="youtubeLink"
         >
           YouTube
         </a>
 
         <a
-          href="https://www.tiktok.com/"
+          class="social"
+          href="#"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
+          id="tiktokLink"
         >
           TikTok
         </a>
 
         <a
-          href="https://www.facebook.com/"
+          class="social"
+          href="#"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
+          id="facebookLink"
         >
           Facebook
         </a>
 
       </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CTA FINAL
+  ====================================================== -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <span class="section-label">
+        Vamos conversar?
+      </span>
+
+      <h2>
+        Talvez o primeiro passo seja simplesmente falar.
+      </h2>
 
       <p>
-        © 2026 Dr. Denis Willian Cruz.
-        Todos os direitos reservados.
+
+        Se você sente que precisa compreender melhor o que está
+        vivendo, entre em contato.
+
       </p>
 
-      <p style="margin-top: 8px;">
-        Psicoterapeuta Integrativo · Psicanalista Clínico
-      </p>
+      <a
+        href="#"
+        class="btn"
+        onclick="abrirWhatsApp(event)"
+      >
+        Falar comigo pelo WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div>
+
+        <div class="footer-name">
+          Dr. Denis Willian Cruz
+        </div>
+
+        <div class="footer-copy">
+          Psicoterapeuta Integrativo • Psicanalista Clínico
+        </div>
+
+      </div>
+
+      <div class="footer-copy">
+        © <span id="ano"></span> Dr. Denis Willian Cruz
+      </div>
 
     </div>
 
   </footer>
 
 
-
-  <!-- =======================================================
+  <!-- =====================================================
        JAVASCRIPT
-       ======================================================= -->
+  ====================================================== -->
 
   <script>
+
+    /*
+    ========================================================
+    CONFIGURAÇÕES DO SITE
+    ========================================================
+
+    ALTERE SOMENTE O QUE ESTÁ ENTRE AS ASPAS.
+
+    ========================================================
+    */
+
+
+    // ------------------------------------------------------
+    // WHATSAPP
+    // ------------------------------------------------------
+
+    const numeroWhatsApp = "55SEUNUMERO";
+
+    const mensagemWhatsApp =
+      "Olá, Dr. Denis! Conheci seu trabalho pelo site e gostaria de saber mais sobre a psicoterapia.";
+
+
+    // ------------------------------------------------------
+    // REDES SOCIAIS
+    // ------------------------------------------------------
+
+    const instagram =
+      "https://www.instagram.com/SEUINSTAGRAM";
+
+    const youtube =
+      "https://www.youtube.com/@SEUCANAL";
+
+    const tiktok =
+      "https://www.tiktok.com/@SEUTIKTOK";
+
+    const facebook =
+      "https://www.facebook.com/SEUFACEBOOK";
+
+
+    // ------------------------------------------------------
+    // FUNÇÃO WHATSAPP
+    // ------------------------------------------------------
 
     function abrirWhatsApp(event) {
 
       event.preventDefault();
 
-      /*
-        COLOQUE SEU NÚMERO AQUI DEPOIS.
-
-        Formato:
-        55 + DDD + número
-
-        Exemplo:
-        5594999999999
-      */
-
-      const numero = "55SEUNUMERO";
-
-      const mensagem =
-        "Olá, Dr. Denis. Conheci seu trabalho pelo site e gostaria de saber mais sobre o acompanhamento psicoterapêutico.";
+      const texto =
+        encodeURIComponent(mensagemWhatsApp);
 
       const url =
         "https://wa.me/" +
-        numero +
+        numeroWhatsApp +
         "?text=" +
-        encodeURIComponent(mensagem);
+        texto;
 
       window.open(url, "_blank");
 
     }
 
-  </script>
 
+    // ------------------------------------------------------
+    // REDES SOCIAIS
+    // ------------------------------------------------------
+
+    document.getElementById("instagramLink").href =
+      instagram;
+
+    document.getElementById("youtubeLink").href =
+      youtube;
+
+    document.getElementById("tiktokLink").href =
+      tiktok;
+
+    document.getElementById("facebookLink").href =
+      facebook;
+
+
+    // ------------------------------------------------------
+    // ANO AUTOMÁTICO
+    // ------------------------------------------------------
+
+    document.getElementById("ano").textContent =
+      new Date().getFullYear();
+
+  </script>
 
 </body>
 </html>

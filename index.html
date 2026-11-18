@@ -11,6 +11,11 @@
     content="Dr. Denis Willian Cruz — Psicoterapeuta Integrativo e Psicanalista Clínico. Um espaço de escuta, reflexão e compreensão."
   >
 
+  <meta property="og:title" content="Dr. Denis Willian Cruz | Psicoterapeuta Integrativo">
+  <meta property="og:description" content="Um espaço de escuta, reflexão e compreensão. Conheça também o devocional Doce Espírito Santo: Um Amigo Íntimo.">
+  <meta property="og:image" content="https://deniswnc02-lang.github.io/site-dr-denis/foto-denis.jpg">
+  <meta property="og:type" content="website">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -438,6 +443,17 @@
     }
 
     /* =========================
+       DEVOCIONAL (APP)
+    ========================= */
+
+    .devocional { background: var(--fundo-claro); }
+    .devocional-box { display: grid; gap: 28px; align-items: center; }
+    .devocional-box img { width: 100%; max-width: 340px; margin: 0 auto; border-radius: 24px; box-shadow: 0 18px 40px rgba(60, 35, 25, .18); }
+    .devocional-lista { list-style: none; padding: 0; margin: 22px 0 28px; display: grid; gap: 10px; color: var(--texto-suave); }
+    .devocional-lista li::before { content: "✦ "; color: var(--marrom-escuro); }
+    @media (min-width: 860px) { .devocional-box { grid-template-columns: 1fr 1.2fr; } }
+
+    /* =========================
        CTA FINAL
     ========================= */
 
@@ -613,6 +629,7 @@
         <div class="foto-card">
           <img
             src="foto-denis.jpg"
+            loading="lazy"
             alt="Dr. Denis Willian Cruz"
           >
         </div>
@@ -946,6 +963,27 @@
 
       </div>
 
+    </section>
+
+
+    <!-- DEVOCIONAL (APP) -->
+
+    <section class="devocional" id="devocional">
+      <div class="container devocional-box">
+        <img src="capa-devocional.jpg" alt="Capa do app Devocional 365 dias da presença do Doce Espírito Santo, Um Amigo Íntimo" loading="lazy">
+        <div>
+          <div class="section-label">NOVO · DEVOCIONAL EM APP</div>
+          <h2 class="section-title">Doce Espírito Santo: Um Amigo Íntimo</h2>
+          <p class="section-text">Um devocional de 365 dias, nascido do meu livro, para você aprender a perceber a presença do Doce Espírito Santo no dia a dia.</p>
+          <ul class="devocional-lista">
+            <li>Um encontro por dia: texto bíblico, contexto, reflexão, oração e prática</li>
+            <li>Narração em áudio para ouvir no caminho</li>
+            <li>Diário espiritual e progresso salvos na sua conta</li>
+            <li>Funciona no celular como app, direto da tela de início</li>
+          </ul>
+          <a href="https://wa.me/5594984251206?text=Ol%C3%A1%2C%20Dr.%20Denis!%20Quero%20entrar%20na%20lista%20de%20espera%20do%20devocional%20Doce%20Esp%C3%ADrito%20Santo." class="cta-principal" target="_blank" rel="noopener noreferrer">Quero entrar na lista de espera</a>
+        </div>
+      </div>
     </section>
 
 

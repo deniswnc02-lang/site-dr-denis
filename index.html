@@ -210,6 +210,10 @@
     .livro img { border-radius: 6px 14px 14px 6px; box-shadow: -14px 24px 50px rgba(55,40,32,.32), inset 4px 0 8px rgba(0,0,0,.2); transform: rotateY(-14deg) rotateX(3deg); transition: transform .6s ease; }
     .livro:hover img { transform: rotateY(-4deg) rotateX(0); }
     .livro::after { content: ""; position: absolute; left: 10%; right: 10%; bottom: -26px; height: 30px; background: radial-gradient(ellipse, rgba(55,40,32,.28), transparent 70%); filter: blur(6px); z-index: -1; }
+    .livro-mockup { max-width: 460px; perspective: none; }
+    .livro-mockup img { width: 100%; height: auto; border-radius: 0; box-shadow: none; transform: none; transition: transform .6s ease; }
+    .livro-mockup:hover img { transform: translateY(-6px); }
+    .livro-mockup::after { display: none; }
     .livro-brilho { position: absolute; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(201,162,126,.35), transparent 65%); top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; }
     .devocional-lista { list-style: none; margin: 22px 0 30px; display: grid; gap: 12px; color: var(--texto-suave); }
     .devocional-lista li { display: flex; gap: 12px; }
@@ -450,9 +454,9 @@
     <!-- LIVRO E DEVOCIONAL -->
     <section class="devocional" id="livro">
       <div class="container devocional-box">
-        <div class="livro revelar">
+        <div class="livro livro-mockup revelar">
           <div class="livro-brilho"></div>
-          <img src="capa-ebook.jpg" alt="Capa do livro Doce Espírito Santo — Um Amigo Íntimo, de Denis Willian Cruz" loading="lazy">
+          <img src="capa-ebook-mockup.webp" alt="Livro e app Doce Espírito Santo — Um Amigo Íntimo, de Denis Willian Cruz" width="900" height="837" loading="lazy">
         </div>
         <div class="revelar">
           <div class="section-label">Novo · Livro e devocional</div>

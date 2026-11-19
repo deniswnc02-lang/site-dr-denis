@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doce Espírito Santo: Um Amigo Íntimo | E-book de Denis Willian Cruz</title>
+  <meta name="description" content="A história de um menino comum que descobriu que o Eterno prefere formar amigos antes de levantar ministros. E-book com 12 capítulos ilustrados, orações e narração em áudio.">
+  <meta name="theme-color" content="#1C1512">
+
+  <meta property="og:title" content="Doce Espírito Santo: Um Amigo Íntimo — E-book">
+  <meta property="og:description" content="Uma jornada de intimidade que conduz o coração à presença de Cristo. E-book por R$ 27.">
+  <meta property="og:image" content="https://deniswnc02-lang.github.io/site-dr-denis/capa-ebook.jpg">
+  <meta property="og:type" content="product">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --fundo: #F5F0EA;
+      --fundo-claro: #FBF9F6;
+      --fundo-escuro: #1C1512;
+      --fundo-escuro-2: #241D1A;
+      --marrom: #8B6655;
+      --marrom-escuro: #5A4035;
+      --bronze: #C9A27E;
+      --champanhe: #E8D3BE;
+      --texto: #292321;
+      --texto-suave: #756B65;
+      --borda: rgba(90, 64, 53, 0.16);
+      --borda-escura: rgba(232, 211, 190, 0.14);
+      --raio: 24px;
+      --sombra: 0 18px 45px rgba(55, 40, 32, 0.10);
+      --grad: linear-gradient(100deg, #E8D3BE 0%, #C9A27E 45%, #B18B77 100%);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "DM Sans", system-ui, sans-serif; background: var(--fundo); color: var(--texto); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(1080px, 90%); margin: 0 auto; }
+    .estreito { width: min(720px, 90%); margin: 0 auto; }
+
+    .rotulo { font-family: "Space Grotesk", sans-serif; font-size: 12px; letter-spacing: 2.4px; text-transform: uppercase; color: var(--marrom); font-weight: 600; display: flex; align-items: center; gap: 12px; }
+    .rotulo::before { content: ""; width: 26px; height: 1px; background: currentColor; }
+    h2 { font-family: "Playfair Display", serif; font-weight: 600; font-size: clamp(30px, 6vw, 44px); line-height: 1.12; letter-spacing: -.5px; margin: 14px 0 18px; }
+    .texto-suave { color: var(--texto-suave); font-size: 17px; }
+    section { padding: 88px 0; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 30px; border-radius: 999px; font-weight: 700; font-size: 16px; transition: transform .25s ease, box-shadow .25s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-ouro { background: var(--grad); color: var(--fundo-escuro); box-shadow: 0 14px 36px rgba(201,162,126,.32); }
+    .btn-escuro { background: var(--marrom-escuro); color: #fff; box-shadow: 0 14px 32px rgba(90,64,53,.22); }
+    .nota-btn { font-size: 13px; color: var(--texto-suave); margin-top: 12px; }
+
+    /* Topo */
+    .topo { background: var(--fundo-escuro); color: #fff; padding: 64px 0 80px; position: relative; overflow: hidden; }
+    .topo::before { content: ""; position: absolute; width: 640px; height: 640px; border-radius: 50%; background: radial-gradient(circle, rgba(201,162,126,.22), transparent 65%); top: -160px; right: -200px; }
+    .topo-grade { display: grid; gap: 40px; align-items: center; position: relative; }
+    .voltar { font-size: 13px; color: rgba(232,211,190,.7); display: inline-block; margin-bottom: 28px; }
+    .voltar:hover { color: var(--champanhe); }
+    .selo { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--borda-escura); background: rgba(255,255,255,.04); color: var(--champanhe); font-size: 11.5px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; }
+    .topo h1 { font-family: "Playfair Display", serif; font-weight: 600; font-size: clamp(40px, 9vw, 68px); line-height: 1.04; letter-spacing: -1px; margin: 22px 0 18px; }
+    .topo h1 em { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .topo .lead { color: rgba(255,255,255,.74); font-size: 18px; max-width: 540px; }
+    .preco-topo { display: flex; align-items: baseline; gap: 10px; margin: 28px 0 22px; }
+    .preco-topo strong { font-family: "Playfair Display", serif; font-size: 44px; color: var(--champanhe); }
+    .preco-topo span { color: rgba(255,255,255,.6); font-size: 14px; }
+    .topo .nota-btn { color: rgba(255,255,255,.55); }
+    .mockup { max-width: 520px; margin: 0 auto; }
+    .mockup img { width: 100%; height: auto; filter: drop-shadow(0 30px 40px rgba(0,0,0,.35)); }
+
+    /* Para quem */
+    .cartoes { display: grid; gap: 16px; margin-top: 34px; }
+    .cartao { background: var(--fundo-claro); border: 1px solid var(--borda); border-radius: var(--raio); padding: 24px 26px; box-shadow: var(--sombra); }
+    .cartao strong { display: block; font-size: 17px; margin-bottom: 6px; }
+    .cartao p { color: var(--texto-suave); font-size: 15.5px; }
+
+    /* O que tem dentro */
+    .dentro { background: var(--fundo-claro); }
+    .itens { display: grid; gap: 18px; margin-top: 34px; }
+    .item { display: flex; gap: 16px; align-items: flex-start; padding: 22px; border-radius: var(--raio); border: 1px solid var(--borda); background: var(--fundo); }
+    .item svg { flex: none; width: 28px; height: 28px; color: var(--marrom); margin-top: 2px; }
+    .item strong { display: block; font-size: 17px; }
+    .item span { color: var(--texto-suave); font-size: 15px; }
+    .em-breve { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--marrom); background: rgba(201,162,126,.22); padding: 2px 10px; border-radius: 999px; margin-left: 6px; vertical-align: middle; }
+
+    /* Citação */
+    .citacao { background: var(--fundo-escuro); color: var(--champanhe); text-align: center; padding: 80px 0; }
+    .citacao p { font-family: "Playfair Display", serif; font-style: italic; font-size: clamp(24px, 5vw, 36px); line-height: 1.35; max-width: 760px; margin: 0 auto; }
+    .citacao small { display: block; margin-top: 18px; font-size: 14px; color: rgba(232,211,190,.6); letter-spacing: 1px; }
+
+    /* Autor */
+    .autor-grade { display: grid; gap: 34px; align-items: center; }
+    .autor-foto { max-width: 340px; margin: 0 auto; border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra); aspect-ratio: 4 / 5; }
+    .autor-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+    .marcas { list-style: none; display: grid; gap: 10px; margin-top: 20px; color: var(--texto-suave); }
+    .marcas li { display: flex; gap: 12px; }
+    .marcas li::before { content: "✦"; color: var(--bronze); }
+
+    /* Oferta */
+    .oferta { background: var(--fundo-claro); }
+    .caixa-oferta { background: var(--fundo-escuro); color: #fff; border-radius: 32px; padding: 44px 32px; text-align: center; box-shadow: 0 30px 70px rgba(28,21,18,.25); max-width: 560px; margin: 34px auto 0; }
+    .caixa-oferta h3 { font-family: "Playfair Display", serif; font-weight: 600; font-size: 26px; color: var(--champanhe); }
+    .caixa-oferta ul { list-style: none; text-align: left; margin: 24px auto 28px; display: grid; gap: 10px; max-width: 380px; color: rgba(255,255,255,.8); font-size: 15.5px; }
+    .caixa-oferta li { display: flex; gap: 10px; }
+    .caixa-oferta li::before { content: "✓"; color: var(--bronze); font-weight: 700; }
+    .caixa-oferta .valor { font-family: "Playfair Display", serif; font-size: 56px; color: var(--champanhe); line-height: 1; }
+    .caixa-oferta .valor-nota { color: rgba(255,255,255,.6); font-size: 14px; margin: 8px 0 26px; }
+    .caixa-oferta .nota-btn { color: rgba(255,255,255,.55); }
+    .garantia { display: flex; gap: 18px; align-items: center; max-width: 560px; margin: 30px auto 0; padding: 22px 24px; border-radius: var(--raio); border: 1px dashed var(--bronze); background: var(--fundo); }
+    .garantia svg { flex: none; width: 46px; height: 46px; color: var(--marrom); }
+    .garantia p { color: var(--texto-suave); font-size: 15px; }
+    .garantia strong { color: var(--texto); }
+
+    /* FAQ */
+    details { border-bottom: 1px solid var(--borda); padding: 20px 0; }
+    details summary { cursor: pointer; font-weight: 600; font-size: 17px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after { content: "+"; color: var(--marrom); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "–"; }
+    details p { color: var(--texto-suave); margin-top: 12px; font-size: 15.5px; }
+
+    .final { text-align: center; background: var(--fundo-escuro); color: #fff; }
+    .final h2 { color: var(--champanhe); }
+    .final p { color: rgba(255,255,255,.7); max-width: 560px; margin: 0 auto 30px; }
+    footer { background: #140F0D; color: rgba(232,211,190,.5); text-align: center; font-size: 13px; padding: 28px 0; }
+    footer a { color: var(--champanhe); }
+
+    /* Botão fixo no celular */
+    .barra-compra { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(28,21,18,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: space-between; gap: 12px; transform: translateY(110%); transition: transform .35s ease; }
+    .barra-compra.visivel { transform: none; }
+    .barra-compra span { color: var(--champanhe); font-weight: 700; font-size: 15px; white-space: nowrap; }
+    .barra-compra .btn { padding: 13px 22px; font-size: 15px; }
+
+    @media (min-width: 860px) {
+      .topo { padding: 56px 0 96px; }
+      .topo-grade { grid-template-columns: 1.05fr .95fr; }
+      .cartoes { grid-template-columns: repeat(3, 1fr); }
+      .itens { grid-template-columns: repeat(2, 1fr); }
+      .autor-grade { grid-template-columns: .8fr 1.2fr; }
+      .barra-compra { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPO -->
+  <header class="topo">
+    <div class="container">
+      <a href="./" class="voltar">← Dr. Denis Willian Cruz</a>
+      <div class="topo-grade">
+        <div>
+          <span class="selo">E-book · Leitura no celular</span>
+          <h1>Doce Espírito Santo: <em>um amigo íntimo</em></h1>
+          <p class="lead">A história de um menino comum que descobriu que o Eterno prefere formar amigos antes de levantar ministros. Uma jornada de intimidade que conduz o coração à presença de Cristo.</p>
+          <div class="preco-topo"><strong>R$ 27</strong><span>pagamento único · acesso imediato</span></div>
+          <a href="https://wa.me/5594984251206?text=Ol%C3%A1%2C%20Dr.%20Denis!%20Quero%20comprar%20o%20e-book%20Doce%20Esp%C3%ADrito%20Santo%20%E2%80%94%20Um%20Amigo%20%C3%8Dntimo%20(R%24%2027)." class="btn btn-ouro comprar" target="_blank" rel="noopener noreferrer">Quero o meu e-book</a>
+          <p class="nota-btn">Garantia de 7 dias. Leia no celular, no tablet ou no computador.</p>
+        </div>
+        <div class="mockup">
+          <img src="capa-ebook-mockup.webp" alt="Livro e app Doce Espírito Santo — Um Amigo Íntimo" width="900" height="837" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PARA QUEM É -->
+  <section>
+    <div class="container">
+      <div class="estreito" style="margin-left:0">
+        <div class="rotulo">Para quem é</div>
+        <h2>Para quem quer mais do que religião: quer intimidade</h2>
+        <p class="texto-suave">Este livro é para você que serve, ora e frequenta, mas sente que falta proximidade. Que conhece muito sobre Deus e deseja conhecê-lo como amigo.</p>
+      </div>
+      <div class="cartoes">
+        <div class="cartao"><strong>Você sente a fé no automático</strong><p>Faz tudo certo, mas a oração parece distante e a rotina espiritual, um dever.</p></div>
+        <div class="cartao"><strong>Você quer perceber a presença dele</strong><p>Deseja reconhecer o Espírito Santo no dia a dia, não só em momentos especiais.</p></div>
+        <div class="cartao"><strong>Você está cansado de cobranças</strong><p>Quer entender que o Eterno busca amizade antes de desempenho.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE TEM DENTRO -->
+  <section class="dentro">
+    <div class="container">
+      <div class="rotulo">O que você recebe</div>
+      <h2>Um livro para ler, ouvir e viver</h2>
+      <div class="itens">
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2V5Z"/><path d="M8 7h6M8 11h6"/></svg>
+          <div><strong>12 capítulos ilustrados</strong><span>A jornada do menino comum até a amizade com o Espírito Santo, capítulo por capítulo.</span></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-11a7 7 0 0 1 14 0c0 6.5-7 11-7 11Z"/><path d="M12 7v6M9 10h6"/></svg>
+          <div><strong>Orações em cada capítulo</strong><span>Para transformar a leitura em conversa com Deus.</span></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg>
+          <div><strong>Páginas para viver cada mensagem</strong><span>Espaços práticos para aplicar o que você leu no seu dia.</span></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="4" height="6" rx="1"/><rect x="17" y="14" width="4" height="6" rx="1"/></svg>
+          <div><strong>Narração em áudio</strong><span>Ouça no caminho, no trânsito ou antes de dormir.</span></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg>
+          <div><strong>Diário espiritual no celular</strong><span>Seu progresso e suas anotações ficam salvos na sua conta.</span></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+          <div><strong>Devocional de 365 dias <span class="em-breve">Em breve</span></strong><span>Um encontro por dia, com texto bíblico, reflexão, oração e prática.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITAÇÃO -->
+  <div class="citacao">
+    <div class="container">
+      <p>"O Eterno prefere formar amigos antes de levantar ministros."</p>
+      <small>Doce Espírito Santo: Um Amigo Íntimo</small>
+    </div>
+  </div>
+
+  <!-- AUTOR -->
+  <section>
+    <div class="container autor-grade">
+      <div class="autor-foto"><img src="foto-denis.jpg" alt="Denis Willian Cruz" loading="lazy"></div>
+      <div>
+        <div class="rotulo">Sobre o autor</div>
+        <h2>Denis Willian Cruz</h2>
+        <p class="texto-suave">Psicoterapeuta Integrativo e Psicanalista Clínico, cristão e estudioso de teologia. Une o cuidado com as emoções ao caminho da fé, ajudando pessoas a viverem uma espiritualidade mais próxima, leve e verdadeira.</p>
+        <ul class="marcas">
+          <li>Mais de 1.000 vidas impactadas com terapia</li>
+          <li>Formação em psicoterapia, psicanálise e teologia</li>
+          <li>Conteúdo sobre emoções, fé e comportamento para milhares de pessoas no Instagram e no TikTok</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section class="oferta" id="comprar">
+    <div class="container">
+      <div style="text-align:center">
+        <div class="rotulo" style="justify-content:center">Garanta o seu</div>
+        <h2>Comece hoje a sua jornada de intimidade</h2>
+      </div>
+      <div class="caixa-oferta">
+        <h3>Doce Espírito Santo: Um Amigo Íntimo</h3>
+        <ul>
+          <li>E-book com 12 capítulos ilustrados</li>
+          <li>Orações e páginas para viver cada mensagem</li>
+          <li>Narração em áudio</li>
+          <li>Diário espiritual salvo na sua conta</li>
+          <li>Acesso pelo celular, tablet ou computador</li>
+        </ul>
+        <div class="valor">R$ 27</div>
+        <p class="valor-nota">Pagamento único, sem mensalidade</p>
+        <a href="https://wa.me/5594984251206?text=Ol%C3%A1%2C%20Dr.%20Denis!%20Quero%20comprar%20o%20e-book%20Doce%20Esp%C3%ADrito%20Santo%20%E2%80%94%20Um%20Amigo%20%C3%8Dntimo%20(R%24%2027)." class="btn btn-ouro comprar" target="_blank" rel="noopener noreferrer">Quero o meu e-book</a>
+        <p class="nota-btn">Você recebe o acesso logo após a confirmação do pagamento.</p>
+      </div>
+      <div class="garantia">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <p><strong>Garantia de 7 dias.</strong> Se o livro não for para você, peça o reembolso em até 7 dias após a compra e devolvemos 100% do valor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="estreito">
+      <div class="rotulo">Perguntas frequentes</div>
+      <h2>Dúvidas comuns</h2>
+      <details><summary>Como recebo o e-book?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso para ler no celular, no tablet ou no computador.</p></details>
+      <details><summary>Onde eu leio?</summary><p>No celular, no tablet ou no computador. O seu progresso e o seu diário espiritual ficam salvos na sua conta.</p></details>
+      <details><summary>O livro é impresso?</summary><p>Não. Esta oferta é do e-book digital, com narração em áudio.</p></details>
+      <details><summary>O devocional de 365 dias está incluído?</summary><p>O devocional está em preparação. Quem compra o e-book fica sabendo em primeira mão quando ele for lançado.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Se o livro não for para você, basta pedir o reembolso nesse prazo.</p></details>
+      <details><summary>Ficou com alguma dúvida?</summary><p>Fale direto comigo pelo <a href="https://wa.me/5594984251206" target="_blank" rel="noopener noreferrer" style="color:var(--marrom);font-weight:600">WhatsApp</a>.</p></details>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="final">
+    <div class="container">
+      <h2>Ele já está aqui. Aprenda a percebê-lo.</h2>
+      <p>Por R$ 27, comece hoje uma jornada que leva o seu coração da rotina para a amizade com Deus.</p>
+      <a href="https://wa.me/5594984251206?text=Ol%C3%A1%2C%20Dr.%20Denis!%20Quero%20comprar%20o%20e-book%20Doce%20Esp%C3%ADrito%20Santo%20%E2%80%94%20Um%20Amigo%20%C3%8Dntimo%20(R%24%2027)." class="btn btn-ouro comprar" target="_blank" rel="noopener noreferrer">Quero o meu e-book</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© Denis Willian Cruz · <a href="./">Voltar ao site</a></div>
+  </footer>
+
+  <div class="barra-compra" id="barra">
+    <span>E-book · R$ 27</span>
+    <a href="https://wa.me/5594984251206?text=Ol%C3%A1%2C%20Dr.%20Denis!%20Quero%20comprar%20o%20e-book%20Doce%20Esp%C3%ADrito%20Santo%20%E2%80%94%20Um%20Amigo%20%C3%8Dntimo%20(R%24%2027)." class="btn btn-ouro comprar" target="_blank" rel="noopener noreferrer">Comprar</a>
+  </div>
+
+  <script>
+    (function () {
+      var barra = document.getElementById('barra');
+      var topo = document.querySelector('.topo');
+      if (!barra || !topo || !('IntersectionObserver' in window)) return;
+      new IntersectionObserver(function (e) {
+        barra.classList.toggle('visivel', !e[0].isIntersecting);
+      }).observe(topo);
+    })();
+  </script>
+</body>
+</html>
